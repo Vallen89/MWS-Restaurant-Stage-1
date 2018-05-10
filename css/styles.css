@@ -147,6 +147,8 @@ nav h1 a {
   text-align: center;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
+	align-content: flex-start;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -272,9 +274,11 @@ nav h1 a {
   padding: 0;
 }
 
-#reviews-list li {
+#reviews-list div {
   background-color: #fff;
     border: 2px solid #f3f3f3;
+		border-top-left-radius: 20px;
+		border-bottom-right-radius: 20px;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -283,14 +287,25 @@ nav h1 a {
   position: relative;
   width: 85%;
 }
-#reviews-list li p {
+#reviews-list div p {
   margin: 0 0 10px;
 }
 #restaurant-hours td {
   color: #666;
 }
 
+#reviews-list h3 {
+	background-color: black;
+	color: white;
+}
+
 /* ====================== Mobile Details ====================== */
+@media only screen and (min-width: 1080px) and (max-width: 1500px) {
+	#reviews-container {
+		width: 48%;
+	}
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1079px) {
 	.inside #map-container {
@@ -311,7 +326,7 @@ nav h1 a {
 
 }
 
-@media only screen and (min-width: 580px) and (max-width: 767px) {
+@media only screen and (min-width: 574px) and (max-width: 767px) {
 	#maincontent {
 
 	}
@@ -334,7 +349,7 @@ nav h1 a {
 
 }
 
-@media only screen and (max-width: 579px) {
+@media only screen and (max-width: 573px) {
 	.inside #map-container {
 	  height: 15%;
 	  position: relative;
@@ -350,6 +365,21 @@ nav h1 a {
 		#reviews-container {
 		  padding: 30px 0 30px 20px;
 		  width: 95%;
+		}
+		/*--------- Index Page ------------*/
+		.filter-options {
+		  height: 135px;
+			justify-content: center;
+		}
 
+		.filter-options h2 {
+		  font-size: 14pt;
+		  margin: 5px 70px 0;
+		}
+
+		.filter-options select {
+		  font-size: 14pt;
+		  margin: 10px 70px 10px;
+			width: 250px;
 		}
 }
